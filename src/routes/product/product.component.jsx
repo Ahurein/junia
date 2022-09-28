@@ -7,28 +7,28 @@ const Product = () => {
   const { productId, category } = useParams();
   console.log(productId, category);
 
-  // const { categoriesMap } = useContext(CategoriesContext);
-  // const [products, setProducts] = useState(null);
+  const { categoriesMap } = useContext(CategoriesContext);
+  const [products, setProducts] = useState([]);
 
-  // useEffect(() => {
-  //   setProducts(categoriesMap[category]);
-  // }, [category, categoriesMap]);
+  useEffect(() => {
+    setProducts(categoriesMap[category]);
+  }, [category, categoriesMap]);
 
-  // console.log("products", products);
-  // console.log("product id", productId);
-  // let product = products[Number(productId)];
+  let currentId = Number(productId);
 
-  // const { name, imageUrl, price } = product;
+  const currentProd = products.find((el) => el.id === currentId);
+
+  const { name, imageUrl, price } = currentProd;
 
   return (
     <div id="sproduct">
       <div className="inner_width">
         <div className="product_image">
-          <img src="" alt="" />
+          <img src={imageUrl} alt="" />
         </div>
         <div className="desc">
-          <p className="name">name</p>
-          <p className="price">545</p>
+          <p className="name">Title: {name}</p>
+          <p className="price">Price: ${price}</p>
         </div>
       </div>
     </div>
