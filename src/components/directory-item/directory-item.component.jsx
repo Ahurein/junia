@@ -10,6 +10,7 @@ function DirectoryItem({ category }) {
   const navigate = useNavigate();
 
   let { title, imageUrl, route } = category;
+
   return (
     <DirectoryItemContainer onClick={linkNavigateHander}>
       <BackgroundImage imageUrl={imageUrl} />

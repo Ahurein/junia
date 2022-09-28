@@ -24,7 +24,10 @@ const Navigation = () => {
     <Fragment>
       <NavigationContainer>
         <LogoContainer to="/">
-          <JuniaLogo className="logo" />
+          <img
+            src="https://i.ibb.co/tzR0tCt/LOGO.png"
+            style={{ width: "100%", height: "100%" }}
+          />
         </LogoContainer>
         <NavLinks>
           <NavLink to="/shop">Shop</NavLink>

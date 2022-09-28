@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import ProductCard from "../product-card/product.card";
 
 const CategoryPreview = ({ title, products }) => {
-  let categoryTitle = title.toLowerCase();
+  console.log("title dfdfdfffffffffffff", title);
+  let categoryTitle = title.toUpperCase();
   return (
     <div className="category-preview-container">
       <h2>
@@ -15,7 +16,7 @@ const CategoryPreview = ({ title, products }) => {
         {products
           .filter((_, idx) => idx < 4)
           .map((product) => (
-            <ProductCard key={product.id} product={product} />
+            <ProductCard category={title} key={product.idx} product={product} />
           ))}
       </div>
     </div>

@@ -1,6 +1,13 @@
 .categories-container {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  .inner_width {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .cat_title {
+      font-size: 30px;
+      font-weight: 900;
+    }
+  }
 }
